@@ -1,5 +1,4 @@
-# Ct
-PL/pgSQL procedure for creating and executing DDL
+PL/pgSQL procedure for creating and executing DDL - assumes many defaults
 
 Concise DSL
 
