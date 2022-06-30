@@ -1,9 +1,11 @@
 PL/pgSQL procedure for constructing and executing DDL from a concise DSL
     
-### e.g.
+##### DSL
 
     accounts:name@text,balance@double precision
     payments:from>accounts,to>accounts,amount@double precision,date@timestamptz
+
+##### Generated DDL
 
     create table accounts(
         id uuid primary key default gen_random_uuid(),
