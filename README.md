@@ -1,5 +1,3 @@
-PL/pgSQL procedure for constructing and executing DDL from a concise DSL
-    
 ##### DSL
 
     accounts:name@text,balance@double precision
