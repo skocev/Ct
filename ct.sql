@@ -1,4 +1,4 @@
-create or replace procedure rocinante.ct(token text) as $$
+create or replace procedure ct(token text) as $$
     declare
         table_name   text := split_part(token, ':', 1);
         fields text array := regexp_split_to_array(split_part(token, ':', 2), ',');
