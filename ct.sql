@@ -1,8 +1,8 @@
 create or replace procedure rocinante.ct(token text) as $$
     declare
-        table_name   text := split_part(token, ':', 1);
-        fields text array := regexp_split_to_array(split_part(token, ':', 2), ',');
-        query        text := 'create table ' || quote_ident(table_name) || '(' || 'id uuid primary key default gen_random_uuid(), ';
+        table_name text := split_part(token, ':', 1);
+        fields   text[] := regexp_split_to_array(split_part(token, ':', 2), ',');
+        query      text := 'create table ' || quote_ident(table_name) || '(' || 'id uuid primary key default gen_random_uuid(), ';
 
     begin
         for i in (array_lower(fields, 1)) .. (array_upper(fields, 1)) loop
